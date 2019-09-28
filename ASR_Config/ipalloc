@@ -1,0 +1,27 @@
+IPV4			GLIDE-NATIVEPLACES-LOURYLAND
+
+VLAN5   		5.151.100.128/29			 
+VLAN6    		100.64.45.0/29
+VLAN7  			130.43.139.40/29
+VLAN10       	100.84.52.0/26
+VLAN50   		100.84.55.0/24
+VLAN2679		5.151.6.64/29				ar-07.ixn -> cs-01.louryland.bhm.natplac
+ 
+NATPOOL  		5.151.91.96/29
+
+IPV6     		2a01:388:58d::/48	
+
+VLAN5   		2a01:388:58d:105::/64			 
+VLAN6    		2a01:388:58d:106::/64
+VLAN7  			2a01:388:58d:107::/64
+VLAN10       	2a01:388:58d:110::/64
+VLAN50   		2a01:388:58d:150::/64
+VLAN2679		2a01:388:58d:f000::/64
+
+Infrastructure
+AP_Infrastructure
+Third_Party
+Data_VLAN_1
+Wifi_VLAN_1
+Uplink 2679
+speed 950

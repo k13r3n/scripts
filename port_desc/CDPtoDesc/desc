@@ -1,0 +1,19 @@
+Device ID: as-a-01.wardley.bdf.sanctuary.as42689.ne
+Interface: GigabitEthernet0/5,  Port ID (outgoing port): GigabitEthernet0/1
+Device ID: as-c-01.wardley.bdf.sanctuary.as42689.ne
+Interface: GigabitEthernet0/7,  Port ID (outgoing port): GigabitEthernet0/1
+Device ID: as-b-01.wardley.bdf.sanctuary.as42689.ne
+Interface: GigabitEthernet0/6,  Port ID (outgoing port): GigabitEthernet0/1
+Device ID: as-e-01.wardley.bdf.sanctuary.as42689.ne
+Interface: GigabitEthernet0/9,  Port ID (outgoing port): GigabitEthernet0/1
+Device ID: as-d-01.wardley.bdf.sanctuary.as42689.ne
+Interface: GigabitEthernet0/8,  Port ID (outgoing port): GigabitEthernet0/1
+Device ID: as-g-01.wardley.bdf.sanctuary.as42689.ne
+Interface: GigabitEthernet0/11,  Port ID (outgoing port): GigabitEthernet0/1
+Device ID: as-f-01.wardley.bdf.sanctuary.as42689.ne
+Interface: GigabitEthernet0/10,  Port ID (outgoing port): GigabitEthernet0/1
+Device ID: as-h-01.wardley.bdf.sanctuary.as42689.ne
+Interface: GigabitEthernet0/12,  Port ID (outgoing port): GigabitEthernet0/1
+Device ID: as-01.wardley.bdf.sanctuary.as42689.net
+Interface: GigabitEthernet0/13,  Port ID (outgoing port): GigabitEthernet0/1
+

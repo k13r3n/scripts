@@ -1,0 +1,45 @@
+#
+#	Ruckus Dot1x'ing by Kieren
+#
+# Insert Port Numbers Here (Assuming they're all on 1/1/X interfaces)
+names='
+2
+3
+4
+5
+6
+7
+'
+echo "conf t
+!
+aaa authentication dot1x default radius
+aaa accounting dot1x default start-stop radius
+aaa authorization coa enable
+!
+radius-server host 109.176.139.28 auth-port 1812 acct-port 1813 default  key 9sn1p!mb dot1x mac-auth
+radius-server host 5.151.185.207 auth-port 1812 acct-port 1813 default  key 9sn1p!mb dot1x mac-auth
+!
+ip radius source-interface ve 5
+!
+authentication
+auth-order dot1x mac-auth
+dot1x enable
+dot1x macauth-override
+auth-mode multiple-hosts
+re-authentication
+dot1x timeout tx-period 10
+!"
+
+for name in $names
+do
+echo "dot1x enable ethernet 1/1/$name
+dot1x port-control auto ethernet 1/1/$name
+mac-authentication enable ethernet 1/1/$name
+!"
+done
+
+echo "end
+!
+wr mem
+!
+"
