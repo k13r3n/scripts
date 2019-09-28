@@ -1,0 +1,21 @@
+#!/bin/bash
+# Basic for loop
+
+names='
+402
+405
+408
+411
+414
+417
+420
+'
+
+for name in $names
+do
+echo "config wlan disable $name
+config wlan radio $name 802.11a-only
+config wlan enable $name
+"
+done
+

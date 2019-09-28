@@ -1,0 +1,108 @@
+#!/bin/bash
+# Basic for loop
+#
+#	Copyright Kieren Denison 2019
+#
+#400	Glide_ar-01
+#401	Glide_2.4_singleband_ar-01
+#402	Glide-5_ar-01
+#403	Glide_ar-02
+#404	Glide_2.4_singleband_ar-02
+#405	Glide-5_ar-02
+#406	Glide_ar-03
+#407	Glide_2.4_singleband_ar-03
+#408	Glide-5_ar-03
+#409	Glide_ar-04
+#410	Glide_2.4_singleband_ar-04
+#411	Glide-5_ar-04
+#412	Glide_ar-05
+#413	Glide_2.4_singleband_ar-05
+#414	Glide-5_ar-05
+#415	Glide_ar-06
+#416	Glide_2.4_singleband_ar-06
+#417	Glide-5_ar-06
+#418	Glide_ar-07
+#419	Glide_2.4_singleband_ar-07
+#420	Glide-5_ar-07
+
+# Put Old WLANs to Remove Here
+arr=("302" "304")
+
+# Put new WLANs to Add Here
+arr2=("401" "402")
+
+# AP group name
+group='unite.somerset'
+
+# ASR the site is on
+ar='"ar-01"'
+
+for old in "${arr[@]}"
+do
+echo "config wlan apgroup interface-mapping delete "$group" $old"
+done
+
+for new in "${arr2[@]}"
+do
+echo "config wlan apgroup interface-mapping add "$group" $new $ar"
+done
+
+for old in "${arr[@]}"
+do
+echo "config wlan apgroup interface-mapping delete "$group"v10 $old"
+done
+
+for new in "${arr2[@]}"
+do
+echo "config wlan apgroup interface-mapping add "$group"v10 $new $ar"
+done
+
+for old in "${arr[@]}"
+do
+echo "config wlan apgroup interface-mapping delete "$group"v11 $old"
+done
+
+for new in "${arr2[@]}"
+do
+echo "config wlan apgroup interface-mapping add "$group"v11 $new $ar"
+done
+
+for old in "${arr[@]}"
+do
+echo "config wlan apgroup interface-mapping delete "$group"v12 $old"
+done
+
+for new in "${arr2[@]}"
+do
+echo "config wlan apgroup interface-mapping add "$group"v12 $new $ar"
+done
+
+for old in "${arr[@]}"
+do
+echo "config wlan apgroup interface-mapping delete "$group"v13 $old"
+done
+
+for new in "${arr2[@]}"
+do
+echo "config wlan apgroup interface-mapping add "$group"v13 $new $ar"
+done
+
+for old in "${arr[@]}"
+do
+echo "config wlan apgroup interface-mapping delete "$group"v14 $old"
+done
+
+for new in "${arr2[@]}"
+do
+echo "config wlan apgroup interface-mapping add "$group"v14 $new $ar"
+done
+
+for old in "${arr[@]}"
+do
+echo "config wlan apgroup interface-mapping delete "$group"v15 $old"
+done
+
+for new in "${arr2[@]}"
+do
+echo "config wlan apgroup interface-mapping add "$group"v15 $new $ar"
+done

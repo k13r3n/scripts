@@ -1,0 +1,20 @@
+#!/bin/bash
+# Basic for loop
+
+wlan='300
+75'
+
+group='unite.brunel'
+
+groupname='Unite: Brunel House'
+
+for wlan in $wlan
+do
+echo "config wlan apgroup add $group "$groupname"
+config wlan apgroup nasid "$wlc.ixn" $group
+config wlan apgroup profile-mapping add $group $group-802.11a
+Y
+config wlan apgroup profile-mapping add $group $group-802.11b
+Y
+config wlan apgroup interface-mapping add $group $wlan management
+config wlan apgroup interface-mapping add $group 309 management

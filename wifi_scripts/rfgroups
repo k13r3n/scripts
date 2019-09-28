@@ -1,0 +1,426 @@
+#!/bin/bash
+# Basic for loop
+
+# RF Profile
+rfprofile='downing-atlas'
+
+# Description
+desc='Downing: The Atlas Building'
+
+# AP Group Name
+group='downing.atlas'
+
+# WLCs
+wlc='wlc-11.ixn'
+wlcha='wlc-ha-07.ixn'
+
+# Put Required WLANs Here
+wlan=("17" "409")
+wlan1=(${wlan[@]})
+echo ""
+echo "$desc RF Profiles and AP Groups"
+echo ""
+for rfprofile in $rfprofile
+do
+echo "config rf-profile create 802.11a "$rfprofile"-802.11a
+config rf-profile description ""$desc"" "$rfprofile"-802.11a
+config rf-profile channel chan-width 40 "$rfprofile"-802.11a
+config rf-profile create 802.11b "$rfprofile"-802.11b
+config rf-profile description ""$desc"" "$rfprofile"-802.11b
+config rf-profile channel add 1 "$rfprofile"-802.11b
+config rf-profile channel add 6 "$rfprofile"-802.11b
+config rf-profile channel add 11 "$rfprofile"-802.11b
+config rf-profile channel chan-width 20 "$rfprofile"-802.11b
+config rf-profile tx-power-max 30 "$rfprofile"-802.11b
+config rf-profile tx-power-min 4 "$rfprofile"-802.11b
+config rf-profile tx-power-control-thresh-v1 -77 "$rfprofile"-802.11b
+config rf-profile tx-power-control-thresh-v2 -75 "$rfprofile"-802.11b
+config rf-profile data-rates 802.11b disabled 1 "$rfprofile"-802.11b
+config rf-profile data-rates 802.11b disabled 2 "$rfprofile"-802.11b
+config rf-profile data-rates 802.11b disabled 5.5 "$rfprofile"-802.11b
+config rf-profile data-rates 802.11b disabled 11 "$rfprofile"-802.11b
+config rf-profile data-rates 802.11b disabled 6 "$rfprofile"-802.11b
+config rf-profile data-rates 802.11b disabled 9 "$rfprofile"-802.11b
+config rf-profile data-rates 802.11b mandatory 12 "$rfprofile"-802.11b
+config rf-profile data-rates 802.11b supported 18 "$rfprofile"-802.11b
+config rf-profile data-rates 802.11b mandatory 24 "$rfprofile"-802.11b
+config rf-profile data-rates 802.11b supported 36 "$rfprofile"-802.11b
+config rf-profile data-rates 802.11b supported 48 "$rfprofile"-802.11b
+config rf-profile data-rates 802.11b supported 54 "$rfprofile"-802.11b
+config rf-profile rx-sop threshold auto "$rfprofile"-802.11b
+config rf-profile band-select cycle-count 4 "$rfprofile"-802.11b
+config rf-profile band-select expire dual-band 300 "$rfprofile"-802.11b
+config rf-profile channel foreign enable "$rfprofile"-802.11b
+config rf-profile channel add 36 "$rfprofile"-802.11a
+config rf-profile channel add 40 "$rfprofile"-802.11a
+config rf-profile channel add 44 "$rfprofile"-802.11a
+config rf-profile channel add 48 "$rfprofile"-802.11a
+config rf-profile channel add 52 "$rfprofile"-802.11a
+config rf-profile channel add 56 "$rfprofile"-802.11a
+config rf-profile channel add 60 "$rfprofile"-802.11a
+config rf-profile channel add 64 "$rfprofile"-802.11a
+config rf-profile channel add 100 "$rfprofile"-802.11a
+config rf-profile channel add 104 "$rfprofile"-802.11a
+config rf-profile channel add 108 "$rfprofile"-802.11a
+config rf-profile channel add 112 "$rfprofile"-802.11a
+config rf-profile channel add 116 "$rfprofile"-802.11a
+config rf-profile channel add 120 "$rfprofile"-802.11a
+config rf-profile channel add 124 "$rfprofile"-802.11a
+config rf-profile channel add 128 "$rfprofile"-802.11a
+config rf-profile channel add 132 "$rfprofile"-802.11a
+config rf-profile channel add 136 "$rfprofile"-802.11a
+config rf-profile channel add 140 "$rfprofile"-802.11a
+config rf-profile tx-power-max 30 "$rfprofile"-802.11a
+config rf-profile tx-power-min 11 "$rfprofile"-802.11a
+config rf-profile tx-power-control-thresh-v1 -67 "$rfprofile"-802.11a
+config rf-profile tx-power-control-thresh-v2 -67 "$rfprofile"-802.11a
+config rf-profile data-rates 802.11a disabled 6 "$rfprofile"-802.11a
+config rf-profile data-rates 802.11a disabled 9 "$rfprofile"-802.11a
+config rf-profile data-rates 802.11a mandatory 12 "$rfprofile"-802.11a
+config rf-profile data-rates 802.11a supported 18 "$rfprofile"-802.11a
+config rf-profile data-rates 802.11a mandatory 24 "$rfprofile"-802.11a
+config rf-profile data-rates 802.11a supported 36 "$rfprofile"-802.11a
+config rf-profile data-rates 802.11a supported 48 "$rfprofile"-802.11a
+config rf-profile data-rates 802.11a supported 54 "$rfprofile"-802.11a
+config rf-profile rx-sop threshold auto "$rfprofile"-802.11a
+"
+done
+echo ""
+echo ""
+echo ""
+for wlc in $wlc
+do
+echo "------$wlc-----------
+config wlan apgroup add "$group" "\"""$desc""\""
+config wlan apgroup nasid $wlc "$group"
+config wlan apgroup profile-mapping add "$group" "$rfprofile"-802.11a
+Y
+config wlan apgroup profile-mapping add "$group" "$rfprofile"-802.11b
+Y"
+done
+
+for wlan in "${wlan[@]}"
+do
+echo "config wlan apgroup interface-mapping add "$group" "$wlan" management"
+done
+
+for wlc in $wlc
+do
+echo "--------VLAN10--------
+config wlan apgroup add "$group"v10 "\"""$desc" VLAN10"\""
+config wlan apgroup nasid $wlc "$group"v10
+config wlan apgroup profile-mapping add "$group"v10 "$rfprofile"-802.11a
+Y
+config wlan apgroup profile-mapping add "$group"v10 "$rfprofile"-802.11b
+Y"
+done
+
+for wlan in "${wlan1[@]}"
+do
+echo "config wlan apgroup interface-mapping add "$group"v10 "$wlan" management"
+done
+for group in $group
+do
+echo "config wlan apgroup interface-mapping add "$group"v10 210 management
+config wlan apgroup port lan 1 "$group"v10 remote-lan 210
+config wlan apgroup port lan 1 "$group"v10 enable
+config wlan apgroup port lan 2 "$group"v10 remote-lan 210
+config wlan apgroup port lan 2 "$group"v10 enable
+config wlan apgroup port lan 3 "$group"v10 remote-lan 210
+config wlan apgroup port lan 3 "$group"v10 enable"
+done
+
+for wlc in $wlc
+do
+echo "--------VLAN11--------
+config wlan apgroup add "$group"v11 "\"""$desc" VLAN11"\""
+config wlan apgroup nasid $wlc "$group"v11
+config wlan apgroup profile-mapping add "$group"v11 "$rfprofile"-802.11a
+Y
+config wlan apgroup profile-mapping add "$group"v11 "$rfprofile"-802.11b
+Y"
+done
+for wlan in "${wlan1[@]}"
+do
+echo "config wlan apgroup interface-mapping add "$group"v11 "$wlan" management"
+done
+for group in $group
+do
+echo "config wlan apgroup interface-mapping add "$group"v11 211 management
+config wlan apgroup port lan 1 "$group"v11 remote-lan 211
+config wlan apgroup port lan 1 "$group"v11 enable
+config wlan apgroup port lan 2 "$group"v11 remote-lan 211
+config wlan apgroup port lan 2 "$group"v11 enable
+config wlan apgroup port lan 3 "$group"v11 remote-lan 211
+config wlan apgroup port lan 3 "$group"v11 enable"
+done
+
+for wlc in $wlc
+do
+echo "--------VLAN12--------
+config wlan apgroup add "$group"v12 "\"""$desc" VLAN12"\""
+config wlan apgroup nasid $wlc "$group"v12
+config wlan apgroup profile-mapping add "$group"v12 "$rfprofile"-802.11a
+Y
+config wlan apgroup profile-mapping add "$group"v12 "$rfprofile"-802.11b
+Y"
+done
+for wlan in "${wlan1[@]}"
+do
+echo "config wlan apgroup interface-mapping add "$group"v12 "$wlan" management"
+done
+for group in $group
+do
+echo "config wlan apgroup interface-mapping add "$group"v12 212 management
+config wlan apgroup port lan 1 "$group"v12 remote-lan 212
+config wlan apgroup port lan 1 "$group"v12 enable
+config wlan apgroup port lan 2 "$group"v12 remote-lan 212
+config wlan apgroup port lan 2 "$group"v12 enable
+config wlan apgroup port lan 3 "$group"v12 remote-lan 212
+config wlan apgroup port lan 3 "$group"v12 enable"
+done
+
+for wlc in $wlc
+do
+echo "--------VLAN13--------
+config wlan apgroup add "$group"v13 "\"""$desc" VLAN13"\""
+config wlan apgroup nasid $wlc "$group"v13
+config wlan apgroup profile-mapping add "$group"v13 "$rfprofile"-802.11a
+Y
+config wlan apgroup profile-mapping add "$group"v13 "$rfprofile"-802.11b
+Y"
+done
+for wlan in "${wlan1[@]}"
+do
+echo "config wlan apgroup interface-mapping add "$group"v13 "$wlan" management"
+done
+for group in $group
+do
+echo "config wlan apgroup interface-mapping add "$group"v13 213 management
+config wlan apgroup port lan 1 "$group"v13 remote-lan 213
+config wlan apgroup port lan 1 "$group"v13 enable
+config wlan apgroup port lan 2 "$group"v13 remote-lan 213
+config wlan apgroup port lan 2 "$group"v13 enable
+config wlan apgroup port lan 3 "$group"v13 remote-lan 213
+config wlan apgroup port lan 3 "$group"v13 enable"
+done
+
+for wlc in $wlc
+do
+echo "--------VLAN14--------
+config wlan apgroup add "$group"v14 "\"""$desc" VLAN14"\""
+config wlan apgroup nasid $wlc "$group"v14
+config wlan apgroup profile-mapping add "$group"v14 "$rfprofile"-802.11a
+Y
+config wlan apgroup profile-mapping add "$group"v14 "$rfprofile"-802.11b
+Y"
+done
+for wlan in "${wlan1[@]}"
+do
+echo "config wlan apgroup interface-mapping add "$group"v14 "$wlan" management"
+done
+for group in $group
+do
+echo "config wlan apgroup interface-mapping add "$group"v14 212 management
+config wlan apgroup port lan 1 "$group"v14 remote-lan 214
+config wlan apgroup port lan 1 "$group"v14 enable
+config wlan apgroup port lan 2 "$group"v14 remote-lan 214
+config wlan apgroup port lan 2 "$group"v14 enable
+config wlan apgroup port lan 3 "$group"v14 remote-lan 214
+config wlan apgroup port lan 3 "$group"v14 enable"
+done
+
+for wlc in $wlc
+do
+echo "--------VLAN15--------
+config wlan apgroup add "$group"v15 "\"""$desc" VLAN15"\""
+config wlan apgroup nasid $wlc "$group"v15
+config wlan apgroup profile-mapping add "$group"v15 "$rfprofile"-802.11a
+Y
+config wlan apgroup profile-mapping add "$group"v15 "$rfprofile"-802.11b
+Y"
+done
+for wlan in "${wlan1[@]}"
+do
+echo "config wlan apgroup interface-mapping add "$group"v15 "$wlan" management"
+done
+for group in $group
+do
+echo "config wlan apgroup interface-mapping add "$group"v15 215 management
+config wlan apgroup port lan 1 "$group"v15 remote-lan 215
+config wlan apgroup port lan 1 "$group"v15 enable
+config wlan apgroup port lan 2 "$group"v15 remote-lan 215
+config wlan apgroup port lan 2 "$group"v15 enable
+config wlan apgroup port lan 3 "$group"v15 remote-lan 215
+config wlan apgroup port lan 3 "$group"v15 enable"
+done
+echo ""
+echo ""
+echo ""
+for wlc in $wlcha
+do
+echo "------$wlcha-----------
+config wlan apgroup add "$group" "\"""$desc""\""
+config wlan apgroup nasid $wlcha "$group"
+config wlan apgroup profile-mapping add "$group" "$rfprofile"-802.11a
+Y
+config wlan apgroup profile-mapping add "$group" "$rfprofile"-802.11b
+Y"
+done
+for wlan in "${wlan1[@]}"
+do
+echo "config wlan apgroup interface-mapping add "$group" "$wlan" management"
+done
+
+for wlc in $wlcha
+do
+echo "--------VLAN10--------
+config wlan apgroup add "$group"v10 "\"""$desc" VLAN10"\""
+config wlan apgroup nasid $wlcha "$group"v10
+config wlan apgroup profile-mapping add "$group"v10 "$rfprofile"-802.11a
+Y
+config wlan apgroup profile-mapping add "$group"v10 "$rfprofile"-802.11b
+Y"
+done
+for wlan in "${wlan1[@]}"
+do
+echo "config wlan apgroup interface-mapping add "$group"v10 "$wlan" management"
+done
+for group in $group
+do
+echo "config wlan apgroup interface-mapping add "$group"v10 210 management
+config wlan apgroup port lan 1 "$group"v10 remote-lan 210
+config wlan apgroup port lan 1 "$group"v10 enable
+config wlan apgroup port lan 2 "$group"v10 remote-lan 210
+config wlan apgroup port lan 2 "$group"v10 enable
+config wlan apgroup port lan 3 "$group"v10 remote-lan 210
+config wlan apgroup port lan 3 "$group"v10 enable"
+done
+
+for wlc in $wlcha
+do
+echo "--------VLAN11--------
+config wlan apgroup add "$group"v11 "\"""$desc" VLAN11"\""
+config wlan apgroup nasid $wlcha "$group"v11
+config wlan apgroup profile-mapping add "$group"v11 "$rfprofile"-802.11a
+Y
+config wlan apgroup profile-mapping add "$group"v11 "$rfprofile"-802.11b
+Y"
+done
+for wlan in "${wlan1[@]}"
+do
+echo "config wlan apgroup interface-mapping add "$group"v11 "$wlan" management"
+done
+for group in $group
+do
+echo "config wlan apgroup interface-mapping add "$group"v11 211 management
+config wlan apgroup port lan 1 "$group"v11 remote-lan 211
+config wlan apgroup port lan 1 "$group"v11 enable
+config wlan apgroup port lan 2 "$group"v11 remote-lan 211
+config wlan apgroup port lan 2 "$group"v11 enable
+config wlan apgroup port lan 3 "$group"v11 remote-lan 211
+config wlan apgroup port lan 3 "$group"v11 enable"
+done
+
+for wlc in $wlcha
+do
+echo "--------VLAN12--------
+config wlan apgroup add "$group"v12 "\"""$desc" VLAN12"\""
+config wlan apgroup nasid $wlcha "$group"v12
+config wlan apgroup profile-mapping add "$group"v12 "$rfprofile"-802.11a
+Y
+config wlan apgroup profile-mapping add "$group"v12 "$rfprofile"-802.11b
+Y"
+done
+for wlan in "${wlan1[@]}"
+do
+echo "config wlan apgroup interface-mapping add "$group"v12 "$wlan" management"
+done
+for group in $group
+do
+echo "config wlan apgroup interface-mapping add "$group"v12 212 management
+config wlan apgroup port lan 1 "$group"v12 remote-lan 212
+config wlan apgroup port lan 1 "$group"v12 enable
+config wlan apgroup port lan 2 "$group"v12 remote-lan 212
+config wlan apgroup port lan 2 "$group"v12 enable
+config wlan apgroup port lan 3 "$group"v12 remote-lan 212
+config wlan apgroup port lan 3 "$group"v12 enable"
+done
+
+
+for wlc in $wlcha
+do
+echo "--------VLAN13--------
+config wlan apgroup add "$group"v13 "\"""$desc" VLAN13"\""
+config wlan apgroup nasid $wlcha "$group"v13
+config wlan apgroup profile-mapping add "$group"v13 "$rfprofile"-802.11a
+Y
+config wlan apgroup profile-mapping add "$group"v13 "$rfprofile"-802.11b
+Y"
+done
+for wlan in "${wlan1[@]}"
+do
+echo "config wlan apgroup interface-mapping add "$group"v13 "$wlan" management"
+done
+for group in $group
+do
+echo "config wlan apgroup interface-mapping add "$group"v13 213 management
+config wlan apgroup port lan 1 "$group"v13 remote-lan 213
+config wlan apgroup port lan 1 "$group"v13 enable
+config wlan apgroup port lan 2 "$group"v13 remote-lan 213
+config wlan apgroup port lan 2 "$group"v13 enable
+config wlan apgroup port lan 3 "$group"v13 remote-lan 213
+config wlan apgroup port lan 3 "$group"v13 enable"
+done
+
+
+for wlc in $wlcha
+do
+echo "--------VLAN14--------
+config wlan apgroup add "$group"v14 "\"""$desc" VLAN14"\""
+config wlan apgroup nasid $wlcha "$group"v14
+config wlan apgroup profile-mapping add "$group"v14 "$rfprofile"-802.11a
+Y
+config wlan apgroup profile-mapping add "$group"v14 "$rfprofile"-802.11b
+Y"
+done
+for wlan in "${wlan1[@]}"
+do
+echo "config wlan apgroup interface-mapping add "$group"v14 "$wlan" management"
+done
+for group in $group
+do
+echo "config wlan apgroup interface-mapping add "$group"v14 214 management
+config wlan apgroup port lan 1 "$group"v14 remote-lan 214
+config wlan apgroup port lan 1 "$group"v14 enable
+config wlan apgroup port lan 2 "$group"v14 remote-lan 214
+config wlan apgroup port lan 2 "$group"v14 enable
+config wlan apgroup port lan 3 "$group"v14 remote-lan 214
+config wlan apgroup port lan 3 "$group"v14 enable"
+done
+
+for wlc in $wlcha
+do
+echo "--------VLAN15--------
+config wlan apgroup add "$group"v15 "\"""$desc" VLAN15"\""
+config wlan apgroup nasid $wlcha "$group"v15
+config wlan apgroup profile-mapping add "$group"v15 "$rfprofile"-802.11a
+Y
+config wlan apgroup profile-mapping add "$group"v15 "$rfprofile"-802.11b
+Y"
+done
+for wlan in "${wlan1[@]}"
+do
+echo "config wlan apgroup interface-mapping add "$group"v15 "$wlan" management"
+done
+for group in $group
+do
+echo "config wlan apgroup interface-mapping add "$group"v15 215 management
+config wlan apgroup port lan 1 "$group"v15 remote-lan 215
+config wlan apgroup port lan 1 "$group"v15 enable
+config wlan apgroup port lan 2 "$group"v15 remote-lan 215
+config wlan apgroup port lan 2 "$group"v15 enable
+config wlan apgroup port lan 3 "$group"v15 remote-lan 215
+config wlan apgroup port lan 3 "$group"v15 enable"
+done
+

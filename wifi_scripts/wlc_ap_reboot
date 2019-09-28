@@ -1,0 +1,13 @@
+#!/bin/bash
+# Basic for loop
+#
+#       Copyright Kieren Denison 2019
+#
+
+while read name;
+do
+echo "config ap reset $name
+y
+"
+done <aplist.txt
+

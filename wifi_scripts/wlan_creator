@@ -1,0 +1,63 @@
+#!/bin/bash
+# Basic for loop
+
+# WLAN ID
+wlan='
+75
+'
+# SSID Name
+ssid='Empiric_staff'
+
+# PSK
+password='testpass'
+
+for wlan in $wlan
+do
+echo "config wlan create $wlan $ssid $ssid
+config wlan nasid none $wlan
+config wlan mdns disable $wlan
+config wlan nac snmp disable $wlan
+config wlan nac radius disable $wlan
+config wlan multicast interface $wlan disable
+config wlan band-select allow disable $wlan
+y
+config wlan ccx aironetiesupport  disable $wlan
+config wlan exclusionlist $wlan 60
+config wlan load-balance allow disable $wlan
+config wlan assisted-roaming prediction disable $wlan
+config wlan assisted-roaming neighbor-list disable $wlan
+config wlan assisted-roaming dual-list disable $wlan
+config wlan bss-transition disassociation-imminent timer 200 $wlan
+config wlan bss-transition disassociation-imminent oproam-timer 40 $wlan
+config wlan multicast buffer disable 0 $wlan
+config wlan session-timeout $wlan disable
+config wlan flexconnect local-switching $wlan enable
+config wlan flexconnect learn-ipaddr $wlan enable
+config wlan wgb broadcast-tagging disable $wlan
+config wlan wgb prp disable $wlan
+config wlan security splash-page-web-redir disable $wlan
+config wlan security wpa akm psk enable $wlan
+config wlan security wpa akm cckm timestamp-tolerance  1000 $wlan
+config wlan security wpa akm psk set-key ascii $password $wlan
+config wlan security wpa gtk-random disable $wlan
+config wlan security pmf association-comeback 1 $wlan
+config wlan security pmf saquery-retrytimeout 200 $wlan
+config wlan exclusionlist $wlan 60
+config wlan profiling radius dhcp disable $wlan
+config wlan profiling radius http disable $wlan
+config wlan fabric disable $wlan
+config wlan fabric encap 0 $wlan
+config wlan fabric name-vnid-mapping  $wlan
+config wlan fabric vnid 0 $wlan
+config wlan fabric tag 0 $wlan
+config wlan fabric peer ip 0.0.0.0 $wlan
+config wlan fabric acl  $wlan
+config wlan fabric avc-policy  $wlan
+config wlan mobility selective-reanchoring disable $wlan
+config wlan u3-interface $wlan disable
+config wlan u3-interface $wlan reporting-interval 30
+config wlan $wlan opendns vap mode is ignore
+config wlan enable $wlan
+"
+done
+

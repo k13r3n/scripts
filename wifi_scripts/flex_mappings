@@ -1,0 +1,11 @@
+#!/bin/bash
+# Basic for loop
+
+while read name;
+do
+echo "config ap disable $name
+config ap flexconnect vlan wlan 301 50 $name
+config ap enable $name
+"
+done <aplist.txt
+

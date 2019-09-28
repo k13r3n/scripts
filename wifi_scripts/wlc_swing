@@ -1,0 +1,12 @@
+#!/bin/bash
+# Basic for loop
+#
+#	Copyright Kieren Denison 2019
+#
+while read name; 
+do
+echo "config ap primary-base wlc-11.ixn $name 77.244.135.244
+config ap secondary-base wlc-ha-07.ixn $name 77.244.135.248
+"
+done <aplist.txt
+

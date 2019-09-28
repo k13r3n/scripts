@@ -1,0 +1,552 @@
+config rf-profile channel add 1 12clarendon-ypp-802.11b
+config rf-profile channel add 1 12clarendon-ypp-802.11b/g
+config rf-profile channel add 36 12clarendon-ypp-802.11a
+
+config rf-profile channel add 1 High-Client-Density-802.11b
+config rf-profile channel add 1 High-Client-Density-802.11b/g
+config rf-profile channel add 36 High-Client-Density-802.11a
+
+config rf-profile channel add 1 Low-Client-Density-802.11b
+config rf-profile channel add 1 Low-Client-Density-802.11b/g
+config rf-profile channel add 36 Low-Client-Density-802.11a
+
+config rf-profile channel add 1 Low-Client-Density-802.11gb
+config rf-profile channel add 1 Low-Client-Density-802.11gb/g
+config rf-profile channel add 36 Low-Client-Density-802.11ga
+
+config rf-profile channel add 1 Typical-Client-Density-802.11b
+config rf-profile channel add 1 Typical-Client-Density-802.11b/g
+config rf-profile channel add 36 Typical-Client-Density-802.11a
+
+config rf-profile channel add 1 Unite-sidneylon-802.11b
+config rf-profile channel add 1 Unite-sidneylon-802.11b/g
+config rf-profile channel add 36 Unite-sidneylon-802.11a
+
+config rf-profile channel add 1 acis-eastshore-802.11b
+config rf-profile channel add 1 acis-eastshore-802.11b/g
+config rf-profile channel add 36 acis-eastshore-802.11a
+
+config rf-profile channel add 1 ariana-kirby-802.11b
+config rf-profile channel add 1 ariana-kirby-802.11b/g
+config rf-profile channel add 36 ariana-kirby-802.11a
+
+config rf-profile channel add 1 aston-c2-802.11b
+config rf-profile channel add 1 aston-c2-802.11b/g
+config rf-profile channel add 36 aston-c2-802.11a
+
+config rf-profile channel add 1 aston-c3-802.11b
+config rf-profile channel add 1 aston-c3-802.11b/g
+config rf-profile channel add 36 aston-c3-802.11a
+
+config rf-profile channel add 1 aston-c4-802.11b
+config rf-profile channel add 1 aston-c4-802.11b/g
+config rf-profile channel add 36 aston-c4-802.11a
+
+config rf-profile channel add 1 aston-d2-802.11b
+config rf-profile channel add 1 aston-d2-802.11b/g
+config rf-profile channel add 36 aston-d2-802.11a
+
+config rf-profile channel add 1 aston-lakeside-802.11b
+config rf-profile channel add 1 aston-lakeside-802.11b/g
+config rf-profile channel add 36 aston-lakeside-802.11a
+
+config rf-profile channel add 1 bathspa-green-802.11b
+config rf-profile channel add 1 bathspa-green-802.11b/g
+config rf-profile channel add 36 bathspa-green-802.11a
+
+config rf-profile channel add 1 beyond-avon-802.11b
+config rf-profile channel add 1 beyond-avon-802.11b/g
+config rf-profile channel add 36 beyond-avon-802.11a
+
+config rf-profile channel add 1 centurion-cathedralliv-802.11b
+config rf-profile channel add 1 centurion-cathedralliv-802.11b/g
+config rf-profile channel add 36 centurion-cathedralliv-802.11a
+
+config rf-profile channel add 1 coastal-strandswa-802.11b
+config rf-profile channel add 1 coastal-strandswa-802.11b/g
+config rf-profile channel add 36 coastal-strandswa-802.11a
+
+config rf-profile channel add 1 collegiate-brunswickstn-802.11b
+config rf-profile channel add 1 collegiate-brunswickstn-802.11b/g
+config rf-profile channel add 36 collegiate-brunswickstn-802.11a
+
+config rf-profile channel add 1 collegiate-saxonrdg-802.11b
+config rf-profile channel add 1 collegiate-saxonrdg-802.11b/g
+config rf-profile channel add 36 collegiate-saxonrdg-802.11a
+
+config rf-profile channel add 1 collegiate-stgilesrdg-802.11b
+config rf-profile channel add 1 collegiate-stgilesrdg-802.11b/g
+config rf-profile channel add 36 collegiate-stgilesrdg-802.11a
+
+config rf-profile channel add 1 cov-singer-802.11b
+config rf-profile channel add 1 cov-singer-802.11b/g
+config rf-profile channel add 36 cov-singer-802.11a
+
+config rf-profile channel add 1 coventry-priory-802.11b
+config rf-profile channel add 1 coventry-priory-802.11b/g
+config rf-profile channel add 36 coventry-priory-802.11a
+
+config rf-profile channel add 1 crm-atlas-802.11b
+config rf-profile channel add 1 crm-atlas-802.11b/g
+config rf-profile channel add 36 crm-atlas-802.11a
+
+config rf-profile channel add 1 crm-holly-802.11b
+config rf-profile channel add 1 crm-holly-802.11b/g
+config rf-profile channel add 36 crm-holly-802.11a
+
+config rf-profile channel add 1 crm-kensingtonbhm-802.11b
+config rf-profile channel add 1 crm-kensingtonbhm-802.11b/g
+config rf-profile channel add 36 crm-kensingtonbhm-802.11a
+
+config rf-profile channel add 1 crm-kingston-802.11b
+config rf-profile channel add 1 crm-kingston-802.11b/g
+config rf-profile channel add 36 crm-kingston-802.11a
+
+config rf-profile channel add 1 crm-metro-802.11b
+config rf-profile channel add 1 crm-metro-802.11b/g
+config rf-profile channel add 36 crm-metro-802.11a
+
+config rf-profile channel add 1 crm-stpeters-802.11b
+config rf-profile channel add 1 crm-stpeters-802.11b/g
+config rf-profile channel add 36 crm-stpeters-802.11a
+
+config rf-profile channel add 1 daisybank-hfs-802.11b
+config rf-profile channel add 1 daisybank-hfs-802.11b/g
+config rf-profile channel add 36 daisybank-hfs-802.11a
+
+config rf-profile channel add 1 dwell-cathedralliv-802.11b
+config rf-profile channel add 1 dwell-cathedralliv-802.11b/g
+config rf-profile channel add 36 dwell-cathedralliv-802.11a
+
+config rf-profile channel add 1 dwell-graftonman-802.11b
+config rf-profile channel add 1 dwell-graftonman-802.11b/g
+config rf-profile channel add 36 dwell-graftonman-802.11a
+
+config rf-profile channel add 1 dwell-msvs-802.11b
+config rf-profile channel add 1 dwell-msvs-802.11b/g
+config rf-profile channel add 36 dwell-msvs-802.11a
+
+config rf-profile channel add 1 empiric-brunswickstn-802.11b
+config rf-profile channel add 1 empiric-brunswickstn-802.11b/g
+config rf-profile channel add 36 empiric-brunswickstn-802.11a
+
+config rf-profile channel add 1 empiric-francis-802.11b
+config rf-profile channel add 1 empiric-francis-802.11b/g
+config rf-profile channel add 36 empiric-francis-802.11a
+
+config rf-profile channel add 1 empiric-metrovick-802.11b
+config rf-profile channel add 1 empiric-metrovick-802.11b/g
+config rf-profile channel add 36 empiric-metrovick-802.11a
+
+config rf-profile channel add 1 empiric-saxonrdg-802.11b
+config rf-profile channel add 1 empiric-saxonrdg-802.11b/g
+config rf-profile channel add 36 empiric-saxonrdg-802.11a
+
+config rf-profile channel add 1 empiric-stpeters-802.11b
+config rf-profile channel add 1 empiric-stpeters-802.11b/g
+config rf-profile channel add 36 empiric-stpeters-802.11a
+
+config rf-profile channel add 1 fsl-briggs-802.11b
+config rf-profile channel add 1 fsl-briggs-802.11b/g
+config rf-profile channel add 36 fsl-briggs-802.11a
+
+config rf-profile channel add 1 fsl-mypad-802.11b
+config rf-profile channel add 1 fsl-mypad-802.11b/g
+config rf-profile channel add 36 fsl-mypad-802.11a
+
+config rf-profile channel add 1 hfs-canalside-802.11b
+config rf-profile channel add 1 hfs-canalside-802.11b/g
+config rf-profile channel add 36 hfs-canalside-802.11a
+
+config rf-profile channel add 1 hfs-court-802.11b
+config rf-profile channel add 1 hfs-court-802.11b/g
+config rf-profile channel add 36 hfs-court-802.11a
+
+config rf-profile channel add 1 hfs-cube-greenwich-802.11b
+config rf-profile channel add 1 hfs-cube-greenwich-802.11b/g
+config rf-profile channel add 36 hfs-cube-greenwich-802.11a
+
+config rf-profile channel add 1 hfs-danesgate-802.11b
+config rf-profile channel add 1 hfs-danesgate-802.11b/g
+config rf-profile channel add 36 hfs-danesgate-802.11a
+
+config rf-profile channel add 1 hfs-kensington-802.11b
+config rf-profile channel add 1 hfs-kensington-802.11b/g
+config rf-profile channel add 36 hfs-kensington-802.11a
+
+config rf-profile channel add 1 hfs-manchester-802.11b
+config rf-profile channel add 1 hfs-manchester-802.11b/g
+config rf-profile channel add 36 hfs-manchester-802.11a
+
+config rf-profile channel add 1 hfs-oxney-802.11b
+config rf-profile channel add 1 hfs-oxney-802.11b/g
+config rf-profile channel add 36 hfs-oxney-802.11a
+
+config rf-profile channel add 1 host-bernard-802.11b
+config rf-profile channel add 1 host-bernard-802.11b/g
+config rf-profile channel add 36 host-bernard-802.11a
+
+config rf-profile channel add 1 host-stthomas-802.11b
+config rf-profile channel add 1 host-stthomas-802.11b/g
+config rf-profile channel add 36 host-stthomas-802.11a
+
+config rf-profile channel add 1 host-sunlight-802.11b
+config rf-profile channel add 1 host-sunlight-802.11b/g
+config rf-profile channel add 36 host-sunlight-802.11a
+
+config rf-profile channel add 1 hst-bernard-802.11b
+config rf-profile channel add 1 hst-bernard-802.11b/g
+config rf-profile channel add 36 hst-bernard-802.11a
+
+config rf-profile channel add 1 hst-londonderry-802.11b
+config rf-profile channel add 1 hst-londonderry-802.11b/g
+config rf-profile channel add 36 hst-londonderry-802.11a
+
+config rf-profile channel add 1 hst-sunlight-802.11b
+config rf-profile channel add 1 hst-sunlight-802.11b/g
+config rf-profile channel add 36 hst-sunlight-802.11a
+
+config rf-profile channel add 1 hult-studioslon-802.11b
+config rf-profile channel add 1 hult-studioslon-802.11b/g
+config rf-profile channel add 36 hult-studioslon-802.11a
+
+config rf-profile channel add 1 lee-abbey-802.11b
+config rf-profile channel add 1 lee-abbey-802.11b/g
+config rf-profile channel add 36 lee-abbey-802.11a
+
+config rf-profile channel add 1 nhs-darent-802.11b
+config rf-profile channel add 1 nhs-darent-802.11b/g
+config rf-profile channel add 36 nhs-darent-802.11a
+
+config rf-profile channel add 1 nhs-jamescook-802.11b
+config rf-profile channel add 1 nhs-jamescook-802.11b/g
+config rf-profile channel add 36 nhs-jamescook-802.11a
+
+config rf-profile channel add 1 nido-haigh-802.11b
+config rf-profile channel add 1 nido-haigh-802.11b/g
+config rf-profile channel add 36 nido-haigh-802.11a
+
+config rf-profile channel add 1 parklane-theascent-802.11b
+config rf-profile channel add 1 parklane-theascent-802.11b/g
+config rf-profile channel add 36 parklane-theascent-802.11a
+
+config rf-profile channel add 1 ras-windsor-802.11b
+config rf-profile channel add 1 ras-windsor-802.11b/g
+config rf-profile channel add 36 ras-windsor-802.11a
+
+config rf-profile channel add 1 rose-christophersid-802.11b
+config rf-profile channel add 1 rose-christophersid-802.11b/g
+config rf-profile channel add 36 rose-christophersid-802.11a
+
+config rf-profile channel add 1 sr-stdavids-802.11b
+config rf-profile channel add 1 sr-stdavids-802.11b/g
+config rf-profile channel add 36 sr-stdavids-802.11a
+
+config rf-profile channel add 1 teeside-central-802.11b
+config rf-profile channel add 1 teeside-central-802.11b/g
+config rf-profile channel add 36 teeside-central-802.11a
+
+config rf-profile channel add 1 tramways-sanctuary-802.11b
+config rf-profile channel add 1 tramways-sanctuary-802.11b/g
+config rf-profile channel add 36 tramways-sanctuary-802.11a
+
+config rf-profile channel add 1 tsh-ams2-ser1-802.11b
+config rf-profile channel add 1 tsh-ams2-ser1-802.11b/g
+config rf-profile channel add 36 tsh-ams2-ser1-802.11a
+
+config rf-profile channel add 1 tsh-ams2-ser2.802.11b
+config rf-profile channel add 1 tsh-ams2-ser2.802.11b/g
+config rf-profile channel add 36 tsh-ams2-ser2.802.11a
+
+config rf-profile channel add 1 tsh-ams2-ser3.802.11b
+config rf-profile channel add 1 tsh-ams2-ser3.802.11b/g
+config rf-profile channel add 36 tsh-ams2-ser3.802.11a
+
+config rf-profile channel add 1 tsh-ams2-ser456-802.11b
+config rf-profile channel add 1 tsh-ams2-ser456-802.11b/g
+config rf-profile channel add 36 tsh-ams2-ser456-802.11a
+
+config rf-profile channel add 1 tsh-collab-802.11b
+config rf-profile channel add 1 tsh-collab-802.11b/g
+config rf-profile channel add 36 tsh-collab-802.11a
+
+config rf-profile channel add 1 tsh-restaurantams2-802.11b
+config rf-profile channel add 1 tsh-restaurantams2-802.11b/g
+config rf-profile channel add 36 tsh-restaurantams2-802.11a
+
+config rf-profile channel add 1 uca-sheldrakeroc-802.11b
+config rf-profile channel add 1 uca-sheldrakeroc-802.11b/g
+config rf-profile channel add 36 uca-sheldrakeroc-802.11a
+
+config rf-profile channel add 1 unite-a1-aston-802.11b
+config rf-profile channel add 1 unite-a1-aston-802.11b/g
+config rf-profile channel add 36 unite-a1-aston-802.11a
+
+config rf-profile channel add 1 unite-a2-aston-802.11b
+config rf-profile channel add 1 unite-a2-aston-802.11b/g
+config rf-profile channel add 36 unite-a2-aston-802.11a
+
+config rf-profile channel add 1 unite-b1-aston-802.11b
+config rf-profile channel add 1 unite-b1-aston-802.11b/g
+config rf-profile channel add 36 unite-b1-aston-802.11a
+
+config rf-profile channel add 1 unite-b2-aston-802.11b
+config rf-profile channel add 1 unite-b2-aston-802.11b/g
+config rf-profile channel add 36 unite-b2-aston-802.11a
+
+config rf-profile channel add 1 unite-beech-802.11b
+config rf-profile channel add 1 unite-beech-802.11b/g
+config rf-profile channel add 36 unite-beech-802.11a
+
+config rf-profile channel add 1 unite-bernlon-802.11b
+config rf-profile channel add 1 unite-bernlon-802.11b/g
+config rf-profile channel add 36 unite-bernlon-802.11a
+
+config rf-profile channel add 1 unite-blenbrs-802.11b
+config rf-profile channel add 1 unite-blenbrs-802.11b/g
+config rf-profile channel add 36 unite-blenbrs-802.11a
+
+config rf-profile channel add 1 unite-blitlon-802.11b
+config rf-profile channel add 1 unite-blitlon-802.11b/g
+config rf-profile channel add 36 unite-blitlon-802.11a
+
+config rf-profile channel add 1 unite-bridgehse-802.11b
+config rf-profile channel add 1 unite-bridgehse-802.11b/g
+config rf-profile channel add 36 unite-bridgehse-802.11a
+
+config rf-profile channel add 1 unite-c1-aston-802.11b
+config rf-profile channel add 1 unite-c1-aston-802.11b/g
+config rf-profile channel add 36 unite-c1-aston-802.11a
+
+config rf-profile channel add 1 unite-c2-aston-802.11b
+config rf-profile channel add 1 unite-c2-aston-802.11b/g
+config rf-profile channel add 36 unite-c2-aston-802.11a
+
+config rf-profile channel add 1 unite-c3-aston-802.11b
+config rf-profile channel add 1 unite-c3-aston-802.11b/g
+config rf-profile channel add 36 unite-c3-aston-802.11a
+
+config rf-profile channel add 1 unite-c4-aston-802.11b
+config rf-profile channel add 1 unite-c4-aston-802.11b/g
+config rf-profile channel add 36 unite-c4-aston-802.11a
+
+config rf-profile channel add 1 unite-cambridgeliv-802.11b
+config rf-profile channel add 1 unite-cambridgeliv-802.11b/g
+config rf-profile channel add 36 unite-cambridgeliv-802.11a
+
+config rf-profile channel add 1 unite-causeway-802.11b
+config rf-profile channel add 1 unite-causeway-802.11b/g
+config rf-profile channel add 36 unite-causeway-802.11a
+
+config rf-profile channel add 1 unite-cedarliv.unite-802.11b
+config rf-profile channel add 1 unite-cedarliv.unite-802.11b/g
+config rf-profile channel add 36 unite-cedarliv.unite-802.11a
+
+config rf-profile channel add 1 unite-d1-aston-802.11b
+config rf-profile channel add 1 unite-d1-aston-802.11b/g
+config rf-profile channel add 36 unite-d1-aston-802.11a
+
+config rf-profile channel add 1 unite-d2-aston-802.11b
+config rf-profile channel add 1 unite-d2-aston-802.11b/g
+config rf-profile channel add 36 unite-d2-aston-802.11a
+
+config rf-profile channel add 1 unite-d3-aston-802.11b
+config rf-profile channel add 1 unite-d3-aston-802.11b/g
+config rf-profile channel add 36 unite-d3-aston-802.11a
+
+config rf-profile channel add 1 unite-d4-aston-802.11b
+config rf-profile channel add 1 unite-d4-aston-802.11b/g
+config rf-profile channel add 36 unite-d4-aston-802.11a
+
+config rf-profile channel add 1 unite-elvet-802.11b
+config rf-profile channel add 1 unite-elvet-802.11b/g
+config rf-profile channel add 36 unite-elvet-802.11a
+
+config rf-profile channel add 1 unite-filbertlei-802.11b
+config rf-profile channel add 1 unite-filbertlei-802.11b/g
+config rf-profile channel add 36 unite-filbertlei-802.11a
+
+config rf-profile channel add 1 unite-gosford-802.11b
+config rf-profile channel add 1 unite-gosford-802.11b/g
+config rf-profile channel add 36 unite-gosford-802.11a
+
+config rf-profile channel add 1 unite-grange-802.11b
+config rf-profile channel add 1 unite-grange-802.11b/g
+config rf-profile channel add 36 unite-grange-802.11a
+
+config rf-profile channel add 1 unite-lakeside-802.11b
+config rf-profile channel add 1 unite-lakeside-802.11b/g
+config rf-profile channel add 36 unite-lakeside-802.11a
+
+config rf-profile channel add 1 unite-larchliv-802.11b
+config rf-profile channel add 1 unite-larchliv-802.11b/g
+config rf-profile channel add 36 unite-larchliv-802.11a
+
+config rf-profile channel add 1 unite-lennonliv-802.11b
+config rf-profile channel add 1 unite-lennonliv-802.11b/g
+config rf-profile channel add 36 unite-lennonliv-802.11a
+
+config rf-profile channel add 1 unite-magnnwc-802.11b
+config rf-profile channel add 1 unite-magnnwc-802.11b/g
+config rf-profile channel add 36 unite-magnnwc-802.11a
+
+config rf-profile channel add 1 unite-manor-802.11b
+config rf-profile channel add 1 unite-manor-802.11b/g
+config rf-profile channel add 36 unite-manor-802.11a
+
+config rf-profile channel add 1 unite-newarkelei-802.11b
+config rf-profile channel add 1 unite-newarkelei-802.11b/g
+config rf-profile channel add 36 unite-newarkelei-802.11a
+
+config rf-profile channel add 1 unite-northfields-802.11b
+config rf-profile channel add 1 unite-northfields-802.11b/g
+config rf-profile channel add 36 unite-northfields-802.11a
+
+config rf-profile channel add 1 unite-oldprintworks-802.11b
+config rf-profile channel add 1 unite-oldprintworks-802.11b/g
+config rf-profile channel add 36 unite-oldprintworks-802.11a
+
+config rf-profile channel add 1 unite-phoebrs-802.11b
+config rf-profile channel add 1 unite-phoebrs-802.11b/g
+config rf-profile channel add 36 unite-phoebrs-802.11a
+
+config rf-profile channel add 1 unite-purbbou-802.11b
+config rf-profile channel add 1 unite-purbbou-802.11b/g
+config rf-profile channel add 36 unite-purbbou-802.11a
+
+config rf-profile channel add 1 unite-salisbury-802.11b
+config rf-profile channel add 1 unite-salisbury-802.11b/g
+config rf-profile channel add 36 unite-salisbury-802.11a
+
+config rf-profile channel add 1 unite-springabd-802.11b
+config rf-profile channel add 1 unite-springabd-802.11b/g
+config rf-profile channel add 36 unite-springabd-802.11a
+
+config rf-profile channel add 1 unite-stmartins-802.11b
+config rf-profile channel add 1 unite-stmartins-802.11b/g
+config rf-profile channel add 36 unite-stmartins-802.11a
+
+config rf-profile channel add 1 unite-sunlight-802.11b
+config rf-profile channel add 1 unite-sunlight-802.11b/g
+config rf-profile channel add 36 unite-sunlight-802.11a
+
+config rf-profile channel add 1 unite-waverley-802.11b
+config rf-profile channel add 1 unite-waverley-802.11b/g
+config rf-profile channel add 36 unite-waverley-802.11a
+
+config rf-profile channel add 1 uoe-southend-802.11b
+config rf-profile channel add 1 uoe-southend-802.11b/g
+config rf-profile channel add 36 uoe-southend-802.11a
+
+config rf-profile channel add 1 upp-blenheimnot-802.11b
+config rf-profile channel add 1 upp-blenheimnot-802.11b/g
+config rf-profile channel add 36 upp-blenheimnot-802.11a
+
+config rf-profile channel add 1 upp-broadgate-802.11b
+config rf-profile channel add 1 upp-broadgate-802.11b/g
+config rf-profile channel add 36 upp-broadgate-802.11a
+
+config rf-profile channel add 1 upp-byron-802.11b
+config rf-profile channel add 1 upp-byron-802.11b/g
+config rf-profile channel add 36 upp-byron-802.11a
+
+config rf-profile channel add 1 upp-clifton-802.11b
+config rf-profile channel add 1 upp-clifton-802.11b/g
+config rf-profile channel add 36 upp-clifton-802.11a
+
+config rf-profile channel add 1 upp-clifton-old-802.11b
+config rf-profile channel add 1 upp-clifton-old-802.11b/g
+config rf-profile channel add 36 upp-clifton-old-802.11a
+
+config rf-profile channel add 1 upp-gill-802.11b
+config rf-profile channel add 1 upp-gill-802.11b/g
+config rf-profile channel add 36 upp-gill-802.11a
+
+config rf-profile channel add 1 upp-gillsouth-802.11b
+config rf-profile channel add 1 upp-gillsouth-802.11b/g
+config rf-profile channel add 36 upp-gillsouth-802.11a
+
+config rf-profile channel add 1 upp-hampden-802.11b
+config rf-profile channel add 1 upp-hampden-802.11b/g
+config rf-profile channel add 36 upp-hampden-802.11a
+
+config rf-profile channel add 1 upp-kirkstalllds-802.11b
+config rf-profile channel add 1 upp-kirkstalllds-802.11b/g
+config rf-profile channel add 36 upp-kirkstalllds-802.11a
+
+config rf-profile channel add 1 upp-maltings-802.11b
+config rf-profile channel add 1 upp-maltings-802.11b/g
+config rf-profile channel add 36 upp-maltings-802.11a
+
+config rf-profile channel add 1 upp-meridian-802.11b
+config rf-profile channel add 1 upp-meridian-802.11b/g
+config rf-profile channel add 36 upp-meridian-802.11a
+
+config rf-profile channel add 1 upp-nortonnot-802.11b
+config rf-profile channel add 1 upp-nortonnot-802.11b/g
+config rf-profile channel add 36 upp-nortonnot-802.11a
+
+config rf-profile channel add 1 upp-peverell-802.11b
+config rf-profile channel add 1 upp-peverell-802.11b/g
+config rf-profile channel add 36 upp-peverell-802.11a
+
+config rf-profile channel add 1 upp-sandby-802.11b
+config rf-profile channel add 1 upp-sandby-802.11b/g
+config rf-profile channel add 36 upp-sandby-802.11a
+
+config rf-profile channel add 1 upp-simpsons-802.11b
+config rf-profile channel add 1 upp-simpsons-802.11b/g
+config rf-profile channel add 36 upp-simpsons-802.11a
+
+config rf-profile channel add 1 urbanest-bridge-802.11b
+config rf-profile channel add 1 urbanest-bridge-802.11b/g
+config rf-profile channel add 36 urbanest-bridge-802.11a
+
+config rf-profile channel add 1 uwe-holliesbrs-802.11b
+config rf-profile channel add 1 uwe-holliesbrs-802.11b/g
+config rf-profile channel add 36 uwe-holliesbrs-802.11a
+
+config rf-profile channel add 1 walton-foundry-802.11b
+config rf-profile channel add 1 walton-foundry-802.11b/g
+config rf-profile channel add 36 walton-foundry-802.11a
+
+config rf-profile channel add 1 walton-thebruce-802.11b
+config rf-profile channel add 1 walton-thebruce-802.11b/g
+config rf-profile channel add 36 walton-thebruce-802.11a
+
+config rf-profile channel add 1 winstanley-griffon-802.11b
+config rf-profile channel add 1 winstanley-griffon-802.11b/g
+config rf-profile channel add 36 winstanley-griffon-802.11a
+
+config rf-profile channel add 1 ypp-31clarendon-802.11b
+config rf-profile channel add 1 ypp-31clarendon-802.11b/g
+config rf-profile channel add 36 ypp-31clarendon-802.11a
+
+config rf-profile channel add 1 ypp-clarendon-802.11b
+config rf-profile channel add 1 ypp-clarendon-802.11b/g
+config rf-profile channel add 36 ypp-clarendon-802.11a
+
+config rf-profile channel add 1 ypp-crown-802.11b
+config rf-profile channel add 1 ypp-crown-802.11b/g
+config rf-profile channel add 36 ypp-crown-802.11a
+
+config rf-profile channel add 1 ypp-fossgate-802.11b
+config rf-profile channel add 1 ypp-fossgate-802.11b/g
+config rf-profile channel add 36 ypp-fossgate-802.11a
+
+config rf-profile channel add 1 ypp-healdgrove-802.11b
+config rf-profile channel add 1 ypp-healdgrove-802.11b/g
+config rf-profile channel add 36 ypp-healdgrove-802.11a
+
+config rf-profile channel add 1 ypp-parksquarelds-802.11b
+config rf-profile channel add 1 ypp-parksquarelds-802.11b/g
+config rf-profile channel add 36 ypp-parksquarelds-802.11a
+
+config rf-profile channel add 1 ypp-stpauls-802.11b
+config rf-profile channel add 1 ypp-stpauls-802.11b/g
+config rf-profile channel add 36 ypp-stpauls-802.11a
+
+config rf-profile channel add 1 ypp-united-802.11b
+config rf-profile channel add 1 ypp-united-802.11b/g
+config rf-profile channel add 36 ypp-united-802.11a
+
